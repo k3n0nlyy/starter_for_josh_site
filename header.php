@@ -32,7 +32,7 @@
 </head>
 <body>
 
-<header class="container-fluid bg-one">
+<header class="container-fluid" style="background-size: cover; background-image: url(<?php the_field('headerbackgroundimage') ?>);">
     <div class="container">
     <nav class="navbar navbar-expand-md navbar-dark">
         <!-- Brand -->
@@ -60,9 +60,10 @@ wp_nav_menu( array(
 
       </nav>
 
-      <div class="tag">
-      <h1>Games Design For the Future</h1>
-      </div>
+      <div class="tag"><!-- div that holds the content in the middle of the page-->
+        <h1><?php the_field('maintagline'); ?></h1>
+              </div><!-- container-->
+
     </div> <!-- container -->
 </header> <!-- container-fluid -->
 <?php wp_head(); ?> <!-- very important that this is added-->
